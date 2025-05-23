@@ -1,12 +1,11 @@
 import React from 'react'
 import { ScrollView, Text, StyleSheet, View } from 'react-native'
+import { Ionicons } from '@expo/vector-icons'
 
 export default function RulesScreen() {
 	return (
 		<ScrollView style={styles.container}>
-			<Text style={styles.header}>Regulamin korzystania z obiektu</Text>
-
-			<View style={styles.block}>
+			<View style={styles.rulesBox}>
 				<Text style={styles.paragraph}>1. Obiekt dostępny jest wyłącznie w godzinach jego funkcjonowania.</Text>
 				<Text style={styles.paragraph}>
 					2. Każdy użytkownik zobowiązany jest do przestrzegania zasad bezpieczeństwa.
@@ -26,18 +25,34 @@ export default function RulesScreen() {
 const styles = StyleSheet.create({
 	container: {
 		flex: 1,
-		backgroundColor: '#f4f4f4',
-		paddingHorizontal: 20,
-		paddingTop: 20,
+		backgroundColor: '#eef6fa',
+		padding: 20,
+	},
+	sectionHeader: {
+		flexDirection: 'row',
+		alignItems: 'center',
+		backgroundColor: '#2d80c1',
+		paddingVertical: 12,
+		paddingHorizontal: 16,
+		borderRadius: 10,
+		marginBottom: 24,
 	},
 	header: {
-		fontSize: 22,
-		fontWeight: 'bold',
-		marginBottom: 20,
-		textAlign: 'center',
+		fontSize: 20,
+		fontWeight: '600',
+		color: 'white',
+		marginLeft: 10,
 	},
-	block: {
+	rulesBox: {
+		backgroundColor: '#ffffff',
+		padding: 16,
+		borderRadius: 12,
 		gap: 12,
+		shadowColor: '#000',
+		shadowOpacity: 0.05,
+		shadowRadius: 4,
+		shadowOffset: { width: 0, height: 2 },
+		elevation: 2,
 	},
 	paragraph: {
 		fontSize: 16,

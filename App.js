@@ -8,17 +8,43 @@ import PricingScreen from './screens/PricingScreen'
 import ContactScreen from './screens/ContactScreen'
 import RulesScreen from './screens/RulesScreen'
 
+import GradientHeader from './components/GradientHeader'
+
 const Stack = createNativeStackNavigator()
 
 export default function App() {
 	return (
 		<NavigationContainer>
 			<Stack.Navigator initialRouteName='Home'>
-				<Stack.Screen name='Home' component={HomeScreen} options={{ title: 'Strona główna' }} />
-				<Stack.Screen name='Schedule' component={ScheduleScreen} options={{ title: 'Grafik' }} />
-				<Stack.Screen name='Pricing' component={PricingScreen} options={{ title: 'Cennik' }} />
-				<Stack.Screen name='Contact' component={ContactScreen} options={{ title: 'Kontakt' }} />
-				<Stack.Screen name='Rules' component={RulesScreen} options={{ title: 'Regulamin' }} />
+				<Stack.Screen name='Home' component={HomeScreen} options={{ headerShown: false }} />
+				<Stack.Screen
+					name='Schedule'
+					component={ScheduleScreen}
+					options={{
+						header: () => <GradientHeader title='Grafik' />,
+					}}
+				/>
+				<Stack.Screen
+					name='Pricing'
+					component={PricingScreen}
+					options={{
+						header: () => <GradientHeader title='Cennik' />,
+					}}
+				/>
+				<Stack.Screen
+					name='Contact'
+					component={ContactScreen}
+					options={{
+						header: () => <GradientHeader title='Kontakt' />,
+					}}
+				/>
+				<Stack.Screen
+					name='Rules'
+					component={RulesScreen}
+					options={{
+						header: () => <GradientHeader title='Regulamin' />,
+					}}
+				/>
 			</Stack.Navigator>
 		</NavigationContainer>
 	)

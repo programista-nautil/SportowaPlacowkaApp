@@ -12,6 +12,9 @@ export const FACILITY = {
 	contact: {
 		phone: '123 456 789',
 		email: 'kontakt@basendelfin.pl',
-		openingHours: 'Pon–Pt: 7:00–21:00, Sob–Nd: 9:00–19:00',
+		openingHours: [
+			{ days: 'Pon–Pt', hours: '7:00–21:00' },
+			{ days: 'Sob–Nd', hours: '9:00–19:00' },
+		],
 	},
 }
