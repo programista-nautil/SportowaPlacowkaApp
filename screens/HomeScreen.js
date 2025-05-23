@@ -26,7 +26,7 @@ export default function HomeScreen() {
 			<View style={styles.alertBox}>
 				<View style={styles.alertContent}>
 					<Ionicons name='information-circle-outline' size={18} color='#2d80c1' style={styles.alertIcon} />
-					<Text style={styles.alertText}>Basen nieczynny w święta</Text>
+					<Text style={styles.alertText}>{FACILITY.alertInfo}</Text>
 				</View>
 			</View>
 
@@ -101,8 +101,9 @@ const styles = StyleSheet.create({
 		padding: 10,
 		borderRadius: 10,
 		marginHorizontal: 20,
+		borderWidth: 1,
 		borderLeftWidth: 4,
-		borderLeftColor: '#2d80c1',
+		borderColor: '#2d80c1',
 	},
 	alertContent: {
 		flexDirection: 'row',
@@ -154,6 +155,7 @@ const styles = StyleSheet.create({
 		backgroundColor: '#ffffff',
 		borderRadius: 12,
 		padding: 16,
+		paddingHorizontal: 30,
 		shadowColor: '#000',
 		shadowOpacity: 0.05,
 		shadowRadius: 6,
@@ -162,8 +164,7 @@ const styles = StyleSheet.create({
 	},
 	hoursHeaderRow: {
 		flexDirection: 'row',
-		alignItems: 'center',
-		marginBottom: 10,
+		marginBottom: 5,
 	},
 	hoursHeader: {
 		fontSize: 16,
